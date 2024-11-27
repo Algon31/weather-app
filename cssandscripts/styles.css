@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Protest+Revolution&display=swap');
+
+@font-face {
+  font-family:'Ravi' ;
+  src: url('../images/Galaksi.ttf');
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+  background-image: url('../images/clouds.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/* App Container Styling */
+.app {
+  text-align: center;
+  align-items: center;
+  max-width: 400px;
+  padding: 20px;
+  /* background: rgba(255, 255, 255, 0.6); Adds a semi-transparent overlay */
+  border-radius: 12px;
+  /* box-shadow: 0 5px 15px rgb(0, 0, 0); */
+}
+
+/* Title Animation */
+.tile {
+  color:#ffffff ;
+  font-family: "Protest Revolution", sans-serif;
+  /* font-family: "Ravi"; */
+  opacity: 0;
+  animation: big1 3s ease-in-out forwards;
+}
+
+@keyframes big1 {
+  0% {
+    font-size: 1px;
+    opacity: 0;
+  }
+  50% {
+    font-size: 65px;
+    opacity: 1;
+  }
+  100% {
+    font-size: 50px;
+    opacity: 1;
+  }
+}
+
+.tile:hover {
+  text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+/* Weather Input Container */
+.weather-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  background: #000000;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+/* Input Field Styling */
+.weather-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 9px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+  color: #333;
+}
+
+.weather-input input::placeholder {
+  color: #999;
+  font-family:  "Doto", sans-serif;
+  font-style: bold,italic;
+}
+
+/* .weather-input input:hover{
+  background-color: gray;
+} */
+
+/* Button Styling */
+.weather-input button {
+  background: #0077b6;
+  color: white;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Button Animation */
+.button {
+  background-color: #00fffb;
+  border-radius: 5px;
+  animation: big2 3s ease-in-out forwards;
+  transition: all 0.3s ease-out;
+}
+
+@keyframes big2 {
+  0% {
+    font-size: 100px;
+    opacity: 0;
+  }
+  50% {
+    font-size: 15px;
+    opacity: 1;
+  }
+  100% {
+    font-size: 20px;
+    opacity: 1;
+  }
+}
+
+.button:hover {
+  background-color: #001aff;
+  font-family: cursive;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* position: relative; */
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+}
+
+/* Weather Display Section */
+#weatherDisplay {
+  margin-top: 20px;
+  font-size: 18px;
+}
