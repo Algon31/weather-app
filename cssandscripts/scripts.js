@@ -55,23 +55,26 @@ function displayWeather(data) {
 function changeBackground(condition) {
   const body = document.body;
 
-  // Map conditions to background images
+
+  const normalizedCondition = condition.trim().toLowerCase().replace(/\s+/g, '_'); // Normalize the condition
+
+  // background images
   const weatherBackgrounds = {
-    "Clear": "url('../images/clear.jpeg')",
-    "Sunny": "url('../images/sunny.jpeg')",
-    "Rain": "url('../images/rainy.jpeg')",
-    "Partly Cloudy": "url('../images/clouds.jpeg')", // Key with space
-    "Snow": "url('../images/snowy.jpeg')",
-    "Thunderstorm": "url('../images/thunder.jpeg')",
-    "Mist": "url('../images/mist.jpeg')",
-    "Haze": "url('../images/haze.jpeg')",
-};
+    "clear": "url('../images/clear.jpeg')",
+    "sunny": "url('../images/sunny.jpeg')",
+    "rain": "url('../images/rainy.jpeg')",
+    "partly_cloudy": "url('../images/clouds.jpeg')", 
+    "snow": "url('../images/snowy.jpeg')",
+    "thunderstorm": "url('../images/thunder.jpeg')",
+    "mist": "url('../images/mist.jpeg')",
+    "haze": "url('../images/haze.jpeg')",
+  };
 
   // Default background if no match
-  const defaultBackground = "url('images/default.jpg')";
+  const defaultBackground = "url('../images/back.jpeg')";
 
   // Set the background based on condition or default
-  body.style.backgroundImage = weatherBackgrounds[condition] || defaultBackground;
+  body.style.backgroundImage = weatherBackgrounds[normalizedCondition] || defaultBackground;
   body.style.backgroundSize = "cover"; // Ensure the image covers the screen
   body.style.backgroundRepeat = "no-repeat";
   body.style.transition = "background 0.5s ease"; // Smooth transition
