@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Protest+Revolution&display=swap');
 
-@font-face {
-  font-family:'Ravi' ;
-  src: url('../images/Galaksi.ttf');
-}
 @media (max-width: 600px) {
   .tile {
     font-size: 40px;
