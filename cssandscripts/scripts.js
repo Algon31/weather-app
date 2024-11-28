@@ -9,9 +9,9 @@ async function getWeather() {
   const url = `https://api.weatherapi.com/v1/current.json?key=ff26bd3a1c4f4d089fa71308241211&q=${city}&aqi=no`;
 
   try {
-    const response = await fetch(url); // Fetch data from API
-    const data = await response.json(); // Parse the JSON data
-    displayWeather(data); // Call function to display weather
+    const response = await fetch(url);
+    const data = await response.json(); 
+    displayWeather(data); 
   } catch (error) {
     console.error("Error fetching weather data:", error);
     document.getElementById("weatherDisplay").innerHTML = `<p>There was an error fetching the weather data.</p>`;
@@ -20,7 +20,7 @@ async function getWeather() {
 
 function displayWeather(data) {
   if (data && data.location && data.current) {
-    // Display weather data
+
     document.getElementById("weatherDisplay").innerHTML = `
       <div class="weather-box">
         <h3>City Of ${data.location.name}, ${data.location.country}</h3>
@@ -60,14 +60,12 @@ function changeBackground(condition) {
     "Clear": "url('../images/clear.jpeg')",
     "Sunny": "url('../images/sunny.jpeg')",
     "Rain": "url('../images/rainy.jpeg')",
-    "Partly Cloudy": "url('../images/clouds.jpeg')", // Key with space
+    "Partly Cloudy": "url('../images/clouds.jpeg')", 
     "Snow": "url('../images/snowy.jpeg')",
     "Thunderstorm": "url('../images/thunder.jpeg')",
     "Mist": "url('../images/mist.jpeg')",
     "Haze": "url('../images/haze.jpeg')",
 };
-
-  // Default background if no match
   const defaultBackground = "url('images/default.jpg')";
 
   // Set the background based on condition or default
