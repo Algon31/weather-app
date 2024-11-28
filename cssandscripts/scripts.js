@@ -57,14 +57,14 @@ function changeBackground(condition) {
 
   // Map conditions to background images
   const weatherBackgrounds = {
-    "Clear": url('../images/clear.jpeg'),
-    "Sunny": url('../images/sunny.jpeg'),
-    "Rain": url('../images/rainy.jpeg'),
-    "Partly Cloudy": url('../images/clouds.jpeg'), 
-    "Snow": url('../images/snowy.jpeg'),
-    "Thunderstorm": url('../images/thunder.jpeg'),
-    "Mist": url('../images/mist.jpeg'),
-    "Haze": url('../images/haze.jpeg'),
+    "Clear": "url('../images/clear.jpeg')",
+    "Sunny": "url('../images/sunny.jpeg')",
+    "Rain": "url('../images/rainy.jpeg')",
+    "Partly Cloudy": "url('../images/clouds.jpeg')", 
+    "Snow": "url('../images/snowy.jpeg')",
+    "Thunderstorm": "url('../images/thunder.jpeg')",
+    "Mist": "url('../images/mist.jpeg')",
+    "Haze": "url('../images/haze.jpeg')",
 };
   const defaultBackground = "url('images/default.jpg')";
 
