@@ -5,8 +5,20 @@
   font-family:'Ravi' ;
   src: url('../images/Galaksi.ttf');
 }
+@media (max-width: 600px) {
+  .tile {
+    font-size: 40px;
+  }
+  #weatherDisplay {
+    font-size: 16px;
+  }
+}
 
 /* Body Styling */
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
@@ -14,7 +26,7 @@ body {
   align-items: center;
   margin: 0;
   height: 100%;
-  background-image: url('../images/clouds.jpeg');
+  background-image: url('../images/back.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -25,9 +37,10 @@ body {
 .app {
   text-align: center;
   align-items: center;
-  max-width: 400px;
+  align-self: center;
+  max-width: auto;
   padding: 20px;
-  /* background: rgba(255, 255, 255, 0.6); Adds a semi-transparent overlay */
+  background: rgba(255, 255, 255, 0.6); 
   border-radius: 12px;
   /* box-shadow: 0 5px 15px rgb(0, 0, 0); */
 }
@@ -35,9 +48,10 @@ body {
 /* Title Animation */
 .tile {
   color:#ffffff ;
+  max-width: auto;
+  /* background: #000; */
   font-family: "Protest Revolution", sans-serif;
-  /* font-family: "Ravi"; */
-  opacity: 0;
+  justify-content: center;
   animation: big1 3s ease-in-out forwards;
 }
 
@@ -59,6 +73,51 @@ body {
 .tile:hover {
   text-shadow: 5px 5px 10px rgb(0, 0, 0);
 }
+#weatherDisplay {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 15px; /* Space between boxes */
+  justify-content: center;
+  align-items: center; 
+  margin-top: 20px;
+}
+
+.weather-box {
+  background: rgba(66, 128, 215, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+  width: 200px; /* Adjust box width */
+}
+.weather-box:hover{
+  box-shadow: 4px 4px 10px #00fffb;
+}
+.weather-box h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.weather-box p {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.weather-box img {
+  align-items: center;
+  margin-top: 10px;
+  width: 50px; /* Adjust size */
+  height: 50px;
+  object-fit: cover;
+}
+.wimg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Weather Input Container */
 .weather-input {
@@ -66,7 +125,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px auto;
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   background: #000000;
   border-radius: 12px;
@@ -92,9 +151,10 @@ body {
   font-style: bold,italic;
 }
 
-/* .weather-input input:hover{
-  background-color: gray;
-} */
+.weather-input input:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease-in-out;
+}
 
 /* Button Styling */
 .weather-input button {
@@ -112,7 +172,7 @@ body {
 
 /* Main Button Animation */
 .button {
-  background-color: #00fffb;
+  background-color: #0048ff;
   border-radius: 5px;
   animation: big2 3s ease-in-out forwards;
   transition: all 0.3s ease-out;
@@ -142,7 +202,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   /* position: relative; */
-  transition: all 0.3s ease-in;
+  transition: all 0.4s ease-in;
   overflow: hidden;
 }
 
