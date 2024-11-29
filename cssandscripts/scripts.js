@@ -77,5 +77,5 @@ function changeBackground(condition) {
   body.style.backgroundImage = weatherBackgrounds[normalizedCondition] || defaultBackground;
   body.style.backgroundSize = "cover"; // Ensure the image covers the screen
   body.style.backgroundRepeat = "no-repeat";
-  // body.style.transition = "background 0.5s ease"; // Smooth transition
+  // body.style.transition = "background 0.5s ease";// Smooth transition
 }
