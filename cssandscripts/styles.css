@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Protest+Revolution&display=swap');
-@font-face {
-  font-family: urbanist;
-  src: url('/assests/Urbanist-Regular.ttf');
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 @media (max-width: 600px) {
   .tile {
