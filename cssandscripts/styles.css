@@ -71,8 +71,9 @@ body {
   grid-template-columns: repeat(3, 1fr); /* Three equal columns */
   gap: 15px; /* Space between boxes */
   justify-content: center;
-  align-items: center; 
-  margin-top: 20px;
+  align-items: center;
+  
+  /* margin-top: 20px; */
 }
 
 .weather-box {

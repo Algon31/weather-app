@@ -44,7 +44,10 @@ function displayWeather(data) {
       </div>
     `;
   } else {
-    document.getElementById("weatherDisplay").innerHTML = `<p>City not found.</p>`;
+    // document.getElementById("weatherDisplay").innerHTML = `<p>City not found... :(</p>`;
+    document.querySelector(".message").innerHTML = `sorry, the city you entered was not found :(`;
+    document.getElementById("weatherDisplay").innerHTML="";
+    // document.querySelector(".add").removeAttribute("weather-box-a");
   }
   console.log("did you get it !!");
 }
