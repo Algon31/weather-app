@@ -22,6 +22,7 @@ function displayWeather(data) {
   if (data && data.location && data.current) {
     document.querySelector(".message").innerHTML = `Its actually ${data.current.condition.text}`;
     // Display weather data
+    document.querySelector(".app").classList.add("weather-box-a");
     document.getElementById("weatherDisplay").innerHTML = `
       <div class="weather-box">
         <p>City Of ${data.location.name}, ${data.location.country}</p>
